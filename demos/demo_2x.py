@@ -31,6 +31,8 @@ parser.add_argument('-r', '--frame_rate', type=int, default=24)
 parser.add_argument("--save_images", action='store_true', default=False)
 
 args = parser.parse_args()
+for arg, value in vars(args).items():
+    print(f"{arg}: {value}")
 # ----------------------- Initialization ----------------------- 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 cfg_path = args.config
