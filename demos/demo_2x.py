@@ -35,6 +35,7 @@ for arg, value in vars(args).items():
     print(f"{arg}: {value}")
 # ----------------------- Initialization ----------------------- 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print("torch.device = ",device)
 cfg_path = args.config
 ckpt_path = args.ckpt
 input_path = args.input
